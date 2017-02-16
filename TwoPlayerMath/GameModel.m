@@ -14,8 +14,6 @@
 // automatically creates _gameModel, getter and setter.
 // initializer use _gameModel.
 
-
-
 @implementation GameModel 
 
 - (instancetype)init {
@@ -26,7 +24,6 @@
     
         _playerOne = @"Player 1";
         _playerTwo = @"Player 2";
-        
     }
     return self;
 }
@@ -36,7 +33,6 @@
     _randomLeftValue = arc4random_uniform(20) + 1;
     _randomRightValue = arc4random_uniform(20) + 1;
 
-    
     _answer = _randomLeftValue + _randomRightValue;
     
     self.answerInString = [NSString stringWithFormat:@"%ld", _answer];
@@ -51,7 +47,6 @@
         
         _currentPlayer = _playerOne;
         return _playerOne;
-    
     }
     else if (_currentPlayer == _playerOne) {
         _currentPlayer = _playerTwo;
@@ -66,26 +61,11 @@
     }
 }
 
-- (BOOL) checkAnswer:(NSString *) userInput {
-    
-    if([userInput isEqualToString:self.answerInString]) {
-        return true;
-    }
-    else {
-        
-
-        
-        //_currentPlayer.countPlayerLife -= 1;
-        return false;
-        
-    }
-}
 
 - (NSString *) printWinner {
-    //if(self.playerTwo.countPlayerLife == 0) {
     if(_playerTwoLife == 0) {
         return @"Player 1 Won";
-
+    
     }
     else if(_playerOneLife == 0) {
         return @"Player 2 Won";

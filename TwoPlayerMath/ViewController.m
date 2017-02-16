@@ -41,24 +41,46 @@
 }
 
 - (IBAction)enterPressed:(id)sender {
-
+    
     if([self.showUserInput.text isEqualToString:[self.gameModel answerInString]]) {
         _userAnswer.text = @"Correct!";
         
         _showQuestion.text = [self.gameModel generateRandomQuestion];
     }
+    
     else {
+        
         _userAnswer.text = @"Incorrect!";
         
         if(self.gameModel.currentPlayer == self.gameModel.playerOne) {
+            self.gameModel.playerOneLife = self.gameModel.playerOneLife-1;
             self.playerOneCurrentScore.text = [NSString stringWithFormat:@"%ld",(long)self.gameModel.playerOneLife];
         }
         else if(self.gameModel.currentPlayer == self.gameModel.playerTwo) {
+            self.gameModel.playerTwoLife = self.gameModel.playerTwoLife-1;
+
             self.playerTwoCurrentScore.text = [NSString stringWithFormat:@"%ld",(long)self.gameModel.playerTwoLife];
         }
     }
         self.showQuestion.text = [self.gameModel generateRandomQuestion];
         self.playerTurn.text = [self.gameModel takeTurn];
+    
+        [self.gameModel printWinner];
+    if((self.gameModel.playerOneLife == 0) || (self.gameModel.playerTwoLife == 0)) {
+        
+        if(self.gameModel.playerTwoLife == 0) {
+            _userAnswer.text = @"Player 1 Won";
+            
+        }
+        else if(self.gameModel.playerOneLife == 0) {
+            _userAnswer.text = @"Player 2 Won";
+        }
+        else {
+            _userAnswer.text = @" ";
+        }
+    }
+    _showUserInput.text = @"";
+
 }
 
 - (IBAction)zeroButtonPressed:(id)sender {

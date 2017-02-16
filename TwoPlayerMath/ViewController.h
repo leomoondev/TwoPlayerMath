@@ -16,8 +16,8 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *playerTurn;
 @property (strong, nonatomic) IBOutlet UILabel *showQuestion;
-
 @property (weak, nonatomic) IBOutlet UILabel *showUserInput;
+@property (strong, nonatomic) IBOutlet UILabel *userAnswer;
 
 - (IBAction)enterPressed:(id)sender;
 - (IBAction)zeroButtonPressed:(id)sender;
@@ -31,7 +31,6 @@
 - (IBAction)eightButtonPressed:(id)sender;
 - (IBAction)nineButtonPressed:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UILabel *userAnswer;
 
 - (IBAction)deletePressed:(id)sender;
 

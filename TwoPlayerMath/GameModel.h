@@ -14,23 +14,24 @@
 
 @property NSString *playerOne;
 @property NSString *playerTwo;
+
 @property NSInteger playerOneLife;
 @property NSInteger playerTwoLife;
 
 @property NSString* answerInString;
 
-@property (assign) int countPlayerLife;
-
 @property NSInteger randomLeftValue;
 @property NSInteger randomRightValue;
 
 @property NSString *currentPlayer;
-
-@property long answer;
+@property NSString *playerName;
 @property NSString* showQuestion;
 
+@property long answer;
+
 - (NSString *) takeTurn;
--(NSString *)generateRandomQuestion;
-@property NSString *playerName;
+- (NSString *)generateRandomQuestion;
+- (NSString *) printWinner;
+
 
 @end
