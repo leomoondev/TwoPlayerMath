@@ -14,6 +14,8 @@
 		DA6804DF1E52840E0017E1E1 /* TwoPlayerMath.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA6804DD1E52840E0017E1E1 /* TwoPlayerMath.xcdatamodeld */; };
 		DA6804E11E52840E0017E1E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6804E01E52840E0017E1E1 /* Assets.xcassets */; };
 		DA6804E41E52840E0017E1E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6804E21E52840E0017E1E1 /* LaunchScreen.storyboard */; };
+		DA6804ED1E528A700017E1E1 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6804EC1E528A700017E1E1 /* Player.m */; };
+		DA6804F01E528AD50017E1E1 /* GameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6804EF1E528AD50017E1E1 /* GameModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		DA6804E01E52840E0017E1E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA6804E31E52840E0017E1E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA6804E51E52840E0017E1E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA6804EB1E528A700017E1E1 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		DA6804EC1E528A700017E1E1 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		DA6804EE1E528AD50017E1E1 /* GameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameModel.h; sourceTree = "<group>"; };
+		DA6804EF1E528AD50017E1E1 /* GameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,10 @@
 				DA6804E51E52840E0017E1E1 /* Info.plist */,
 				DA6804DD1E52840E0017E1E1 /* TwoPlayerMath.xcdatamodeld */,
 				DA6804D11E52840E0017E1E1 /* Supporting Files */,
+				DA6804EB1E528A700017E1E1 /* Player.h */,
+				DA6804EC1E528A700017E1E1 /* Player.m */,
+				DA6804EE1E528AD50017E1E1 /* GameModel.h */,
+				DA6804EF1E528AD50017E1E1 /* GameModel.m */,
 			);
 			path = TwoPlayerMath;
 			sourceTree = "<group>";
@@ -155,9 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA6804D91E52840E0017E1E1 /* ViewController.m in Sources */,
+				DA6804F01E528AD50017E1E1 /* GameModel.m in Sources */,
 				DA6804D61E52840E0017E1E1 /* AppDelegate.m in Sources */,
 				DA6804D31E52840E0017E1E1 /* main.m in Sources */,
 				DA6804DF1E52840E0017E1E1 /* TwoPlayerMath.xcdatamodeld in Sources */,
+				DA6804ED1E528A700017E1E1 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +328,7 @@
 				DA6804EA1E52840E0017E1E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
